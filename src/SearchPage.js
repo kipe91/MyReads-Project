@@ -5,7 +5,7 @@ import * as BooksAPI from './BooksAPI'
 import Header from './Header'
 import Book from './Book'
 
-class SearchBooks extends Component {
+class SearchPage extends Component {
 
 	state = {
     	query: '',
@@ -70,4 +70,4 @@ class SearchBooks extends Component {
 	}
 }
 
-export default SearchBooks
+export default SearchPage
