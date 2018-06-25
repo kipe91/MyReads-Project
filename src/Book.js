@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import { Route } from 'react-router-dom'
 
 class Book extends Component {
 
@@ -8,11 +9,14 @@ class Book extends Component {
 
   render () {
     const {book} = this.props
-    
+
     return (
       <div className="book">
        <div className="book-top">
          <div className="book-cover" style={{ height: 192, width: 128, backgroundImage: `url(${book.imageLinks !== undefined ? book.imageLinks.thumbnail: ''})` }}></div>
+          <Route path="/search" render={() => (
+            <div className={book.shelf ? 'book-shelf-state' : ''}>{book.shelf}</div>
+          )}/>
           <div className="book-shelf-changer">
             <select value={book.shelf} onChange={(e) => this.updateBook(e.target.value)}>
               <option value="" disabled>Move to...</option>
