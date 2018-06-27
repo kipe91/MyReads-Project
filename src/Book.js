@@ -18,11 +18,11 @@ class Book extends Component {
             <div className={book.shelf ? 'book-shelf-state' : ''}>{book.shelf}</div>
           )}/>
           <div className="book-shelf-changer">
-            <select value={book.shelf} onChange={(e) => this.updateBook(e.target.value)}>
+            <select value={book.shelf || 'none'} onChange={(e) => this.updateBook(e.target.value)}>
               <option value="" disabled>Move to...</option>
               <option value="currentlyReading">Currently Reading</option>
               <option value="wantToRead">Want to Read</option>
-              <option value="read">Read</option>
+              <option value="read">Read</option> 
               <option value="none">None</option>
             </select>
           </div>

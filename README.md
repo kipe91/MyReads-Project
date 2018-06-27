@@ -7,7 +7,7 @@ A perfect way to keep track of books.
 ## To get started
 
 1. Download zip file (and package it up) or clone this repository.
-2. Start your console and cd into the projects folder.
+2. Start your terminal and cd into the projects folder.
     - install all project dependencies with `npm install`
     - start the development server with `npm start`
 3. If your browser dont start automatic then browse to `http://localhost:3000/`
